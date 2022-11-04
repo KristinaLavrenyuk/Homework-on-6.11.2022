@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    float array[100], sumFloat = 0, sumInt = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> array[i];
+        if (array[i] > (int)array[i]) sumFloat += array[i];
+        else sumInt += array[i];
+    }
+    if (sumInt > sumFloat) cout << sumInt - sumFloat;
+    else cout << sumFloat - sumInt;
+    system("pause");
+}
